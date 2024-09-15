@@ -165,9 +165,9 @@
 
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required />
-                        <input type="email" name="Email" placeholder="Your Email" required />
-                        <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+                        <input type="text" name="Name" class="form-control" placeholder="Your Name" required />
+                        <input type="email" name="Email" class="form-control" placeholder="Your Email" required />
+                        <textarea name="Message" rows="5" class="form-control" placeholder="Your Message" required></textarea>
                         <button type="Submit" class="btn btn2">Submit</button>
                     </form>
                     <span id="msg"></span>
@@ -178,6 +178,16 @@
             <p>Copyright 2024 © Satyam kushwaha. All rights reserved.</p>
         </div>
     </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyBVjR7-RFhwd468PCFbvKekRpFWSzIeIf6oszRXrP03110Dbe9YzfhUc5O-0Pm--RXhw/exec'; // Replace 'Your URL will be here' with the URL of your Google Apps Script
+        const form = document.forms['submit-to-google-sheet'];
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message));
+        });
+    </script>
 
 
 
