@@ -21,7 +21,7 @@ function closemenu() {
     sidemenu.style.right = "-200px";
 }
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwSawvairRZtoaXaQwgEI8kkQAevLa3nIGHgCPuZ0r6bJTCThE0KGHtCokGZ1Lva7e-Bw/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyBVjR7-RFhwd468PCFbvKekRpFWSzIeIf6oszRXrP03110Dbe9YzfhUc5O-0Pm--RXhw/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById('msg')
 
